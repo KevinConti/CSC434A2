@@ -11,8 +11,8 @@ int main() {
     int paramInt = 8, factorialValue;
     double paramDouble = 8.0;
     char paramChar = '8';
-    //part1(paramInt, paramDouble, paramChar);
-    factorialValue = factorial(0);
+    part1(paramInt, paramDouble, paramChar);
+    factorialValue = factorial(6);
     printf("\nFactorial value is: %d\n", factorialValue);
     return 0;
 }
