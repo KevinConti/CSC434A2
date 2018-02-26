@@ -70,10 +70,20 @@ int factorial(int power){
 
     //base caase
     if(power <= 1){
-        return 1;
+        factorialValue = 1;
+
+        //print statements for part 2
+        printf("factorialValue location: %p\n", (void *)&factorialValue);
+        printf("factorialValue value: %d\n", factorialValue);
+
+        return factorialValue;
     } else {
         //Progress step
         factorialValue = factorial(power - 1) * power;
+
+        //Print statements for part 2
+        printf("factorialValue location: %p\n", (void *)&factorialValue);
+        printf("factorialValue value: %d\n", factorialValue);
         return factorialValue;
     }
 }
