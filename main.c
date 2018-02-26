@@ -5,13 +5,15 @@ int globalInt = 3;
 double globalDouble = 3.0;
 char globalChar = '3';
 void part1(int, double, char);
+int factorial(int);
 
 int main() {
-    int paramInt = 8;
+    int paramInt = 8, factorialValue;
     double paramDouble = 8.0;
     char paramChar = '8';
-
-    part1(paramInt, paramDouble, paramChar);
+    //part1(paramInt, paramDouble, paramChar);
+    factorialValue = factorial(0);
+    printf("\nFactorial value is: %d\n", factorialValue);
     return 0;
 }
 
@@ -59,5 +61,19 @@ void part1(int paramInt, double paramDouble, char paramChar){
 
     puts("String literals:");
     printf("Literal: %p\n\n", literalCharPtr);
+}
 
+//This Algorithm returns n! factorial, where n = the integer sent in the parameter
+//this algorithm is implemented in a recursive function
+int factorial(int power){
+    int factorialValue;
+
+    //base caase
+    if(power <= 1){
+        return 1;
+    } else {
+        //Progress step
+        factorialValue = factorial(power - 1) * power;
+        return factorialValue;
+    }
 }
